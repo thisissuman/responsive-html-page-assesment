@@ -62,33 +62,61 @@
       }
 
       .box-container {
-    border: 1px solid #cebaba;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-  }
-  .announcement {
-    
-    padding: 10px;
-    position: relative;
-    background-color: #f9f9f9;
-  }
-  .announcement-header {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  .pinned-icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 1.25rem;
-  }
-  .social-actions {
-    display: flex;
-    justify-content: space-around;
-    padding-top: 10px;
-    border-top: 1px solid #ddd;
-  }
+        border: 1px solid #cebaba;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 10px;
+      }
+      .announcement {
+        padding: 10px;
+        position: relative;
+        background-color: #f9f9f9;
+      }
+      .announcement-header {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .pinned-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 1.25rem;
+      }
+      .social-actions {
+        gap: 10px;
+        text-decoration: none;
+        list-style: none;
+
+        display: flex;
+        justify-content: flex-start;
+        padding-top: 10px;
+        border-top: 1px solid #ddd;
+      }
+      .right-sidebar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 300px; /* Adjust the width as needed */
+        height: 100%;
+        background-color: #f8f9fa;
+        overflow-y: auto;
+      }
+      .list-group-item {
+        margin-bottom: 10px;
+      }
+
+      .time-text {
+        color: grey;
+        font-size: small;
+      }
+      .check-in-btn {
+        border: 1px solid blue;
+        color: blue;
+      }
+      .check-in-btn:hover {
+        background-color: blue;
+        color: white;
+      }
     </style>
   </head>
   <body>
@@ -194,6 +222,7 @@
             </a>
           </div>
         </div>
+
         <div class="col-sm p-5 min-vh-100">
           <!-- content -->
           <hr />
@@ -329,17 +358,74 @@
           <div class="box-container">
             <!-- Announcement 1 -->
             <div class="announcement">
-              <span class="pinned-icon">&#128204;</span> <!-- Pinned icon -->
+              <span class="pinned-icon">&#128204;</span>
+              <!-- Pinned icon -->
               <div class="announcement-header">Announcement Title</div>
-              <p>This is the message of the announcement. It's detailed and informative, providing all the necessary information.</p>
+              <p>
+                This is the message of the announcement. It's detailed and
+                informative, providing all the necessary information.
+              </p>
               <div class="social-actions">
-                <a href="#" class="text-primary">Like</a>
-                <a href="#" class="text-primary">Share</a>
-                <a href="#" class="text-primary">Comment</a>
+                <span href="#" class="text-primary">❤ Like</span>
+                <span href="#" class="text-primary">☁ Comment</span>
+                <span href="#" class="text-primary">📩 Share</span>
+              </div>
+            </div>
+            <div class="announcement">
+              <span class="pinned-icon">&#128204;</span>
+              <!-- Pinned icon -->
+              <div class="announcement-header">Announcement Title</div>
+              <p>
+                This is the message of the announcement. It's detailed and
+                informative, providing all the necessary information.
+              </p>
+              <div class="social-actions">
+                <span href="#" class="text-primary">❤ Like</span>
+                <span href="#" class="text-primary">☁ Comment</span>
+                <span href="#" class="text-primary">📩 Share</span>
               </div>
             </div>
           </div>
         </div>
+
+        <div class="col-md-3">
+            <div class="right-sidebar">
+              <h3 class="text-center mt-3">Things to do</h3>
+              <div class="list-group">
+                <!-- Task Item -->
+                <div class="list-group-item">
+                  <p class="time-text mb-2">15 Feb 2024, 4:31 PM</p>
+                  <p class="fw-bold mb-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Maiores commodi delectus recusandae nobis! Explicabo, quas
+                    rerum aliquam cum aperiam pariatur itaque? Deserunt quam ad
+                    dicta qui modi placeat aut reiciendis!
+                  </p>
+                  <button type="button" class="btn btn-outline-primary mb-3">
+                    Check-in key result progress
+                  </button>
+                </div>
+                <hr />
+                <!-- Repeat for other tasks -->
+                <div class="list-group-item">
+                    <p class="time-text mb-2">15 Feb 2024, 4:31 PM</p>
+                    <p class="fw-bold mb-3">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Maiores commodi delectus recusandae nobis! Explicabo, quas
+                      rerum aliquam cum aperiam pariatur itaque? Deserunt quam ad
+                      
+                    </p>
+                    <button type="button" class="btn btn-outline-primary mb-3">
+                      Check-in key result progress
+                    </button>
+                  </div>
+                  <hr />
+              </div>
+            </div>
+          </div>
+
+
+
       </div>
     </div>
 
